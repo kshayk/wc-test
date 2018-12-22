@@ -1,7 +1,7 @@
 This project was made by laravel, so by following those steps everything should work as expected:
 
 1. Clone this project to your own machine
-2. Run "npm init" in the root directory
+2. Run "npm install" in the root directory
 3. Run "composer install" in the root directory
 4. Run "php artisan jwt:secret" in the root directory to generate your own JWT secret
 5. Create a MySql database called "wisecredit" and a MySql username called "wisecredit" with password "1a2b3c4d" (you may change the username/password as you like but it must be changed in the .env file in the root directory as well)
