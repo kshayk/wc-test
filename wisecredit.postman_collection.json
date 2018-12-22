@@ -1,0 +1,214 @@
+{
+	"variables": [],
+	"info": {
+		"name": "wisecredit",
+		"_postman_id": "63f7340c-4d56-da11-ed40-e2207d80a6c4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/entity",
+			"request": {
+				"url": "localhost:8000/entity",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvdG9rZW4iLCJpYXQiOjE1NDU0ODUxMTEsImV4cCI6MTU0NTQ4ODcxMSwibmJmIjoxNTQ1NDg1MTExLCJqdGkiOiJWQWNDTnBGN0FCcTBJY3VFIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.X8L2TctfByNITkzaIkqDh58fc-7kCPAbC-_dfdhpt8s",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "aaa@aa.aa",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "1a2b3c4d",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": "get an entity\n"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/entity",
+			"request": {
+				"url": "localhost:8000/entity",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE1NDU0OTEwNzQsImV4cCI6MTU0NTQ5NDY3NCwibmJmIjoxNTQ1NDkxMDc0LCJqdGkiOiJYYUNqT2pkNEVTZGhQZ2VRIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.EKjkWf0DrAUjCEBKTSMFgR7G0SB05LWhBNBoyGjNZ8M",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "my new entity",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "create an entity\n"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/entity",
+			"request": {
+				"url": "localhost:8000/entity",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE1NDU0OTEwNzQsImV4cCI6MTU0NTQ5NDY3NCwibmJmIjoxNTQ1NDkxMDc0LCJqdGkiOiJYYUNqT2pkNEVTZGhQZ2VRIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.EKjkWf0DrAUjCEBKTSMFgR7G0SB05LWhBNBoyGjNZ8M",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "my new test name 2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "updating entity"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/entity",
+			"request": {
+				"url": "localhost:8000/entity",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE1NDU0OTEwNzQsImV4cCI6MTU0NTQ5NDY3NCwibmJmIjoxNTQ1NDkxMDc0LCJqdGkiOiJYYUNqT2pkNEVTZGhQZ2VRIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.EKjkWf0DrAUjCEBKTSMFgR7G0SB05LWhBNBoyGjNZ8M",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "deleting entity"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/token",
+			"request": {
+				"url": "localhost:8000/token",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kshayk5@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1a2b3c4d",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "login with credentials"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/register",
+			"request": {
+				"url": "localhost:8000/register",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kshayk7@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1a2b3c4d",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Register a new user and get a token"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/account",
+			"request": {
+				"url": "localhost:8000/account",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvbG9naW4iLCJpYXQiOjE1NDU0OTEwNzQsImV4cCI6MTU0NTQ5NDY3NCwibmJmIjoxNTQ1NDkxMDc0LCJqdGkiOiJYYUNqT2pkNEVTZGhQZ2VRIiwic3ViIjo2LCJwcnYiOiI4N2UwYWYxZWY5ZmQxNTgxMmZkZWM5NzE1M2ExNGUwYjA0NzU0NmFhIn0.EKjkWf0DrAUjCEBKTSMFgR7G0SB05LWhBNBoyGjNZ8M",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "get account based on token"
+			},
+			"response": []
+		}
+	]
+}
