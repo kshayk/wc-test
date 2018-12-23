@@ -53,7 +53,6 @@ class EntityController extends Controller
             return response()->json('No entity found', 404);
         }
 
-
         $entity->name = $request->name;
         $entity->save();
 
