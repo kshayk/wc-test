@@ -82,7 +82,7 @@ class EntityTest extends TestCase
     {
         $goodResponse = $this->withHeaders([
             'Authorization' => 'Bearer ' . $this->token,
-        ])->json('PUT', '/entity', ['id' => $this->exampleEntityId, 'name' => 'M6RsGJKiBxoxxMv5RfJG update']);
+        ])->json('PUT', '/entity/' . $this->exampleEntityId, ['name' => 'M6RsGJKiBxoxxMv5RfJG update']);
 
         $responseObject = json_decode($goodResponse->baseResponse->getContent());
 
@@ -93,7 +93,7 @@ class EntityTest extends TestCase
 
         $missingResponse = $this->withHeaders([
             'Authorization' => 'Bearer ' . $this->token,
-        ])->json('PUT', '/entity', ['id' => 999999999, 'name' => 'M6RsGJKiBxoxxMv5RfJG update']);
+        ])->json('PUT', '/entity/999999999', ['name' => 'M6RsGJKiBxoxxMv5RfJG update']);
 
         $missingResponse->assertStatus(404);
     }
@@ -102,13 +102,13 @@ class EntityTest extends TestCase
     {
         $goodResponse = $this->withHeaders([
             'Authorization' => 'Bearer ' . $this->token,
-        ])->json('DELETE', '/entity', ['id' => $this->exampleEntityId]);
+        ])->json('DELETE', '/entity/' . $this->exampleEntityId);
 
         $goodResponse->assertStatus(200);
 
         $missingResponse = $this->withHeaders([
             'Authorization' => 'Bearer ' . $this->token,
-        ])->json('DELETE', '/entity', ['id' => $this->exampleEntityId]);
+        ])->json('DELETE', '/entity/' . $this->exampleEntityId);
 
         $missingResponse->assertStatus(404);
     }

@@ -36,18 +36,21 @@ class EntityController extends Controller
         return response()->json($entity);
     }
 
-    public function updateEntity(Request $request)
+    public function updateEntity(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:50',
-            'id' => 'required|integer'
+            'name' => 'required|string|max:50'
         ]);
+
+        if(empty($id)) {
+            return response()->json('Please use a valid ID', 400);
+        }
 
         if($validator->fails()){
             return response()->json($validator->errors()->toArray(), 400);
         }
 
-        $entity = Entity::where('id', $request->id)->where('user_id', $request->user->id)->first();
+        $entity = Entity::where('id', $id)->where('user_id', $request->user->id)->first();
 
         if(empty($entity)) {
             return response()->json('No entity found', 404);
@@ -59,17 +62,13 @@ class EntityController extends Controller
         return response()->json($entity);
     }
 
-    public function deleteEntity(Request $request)
+    public function deleteEntity(Request $request, $id)
     {
-        $validator = Validator::make($request->all(), [
-            'id' => 'required|integer'
-        ]);
+        if(empty($id)) {
+            return response()->json('Please provide a valid id', 400);
+        };
 
-        if($validator->fails()){
-            return response()->json($validator->errors()->toArray(), 400);
-        }
-
-        $entity = Entity::where('id', $request->id)->where('user_id', $request->user->id)->first();
+        $entity = Entity::where('id', $id)->where('user_id', $request->user->id)->first();
 
         if(empty($entity)) {
             return response()->json('Could not find entity to delete', 404);

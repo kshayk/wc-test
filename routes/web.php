@@ -23,7 +23,7 @@ Route::group(['middleware' => ['jwt.verify']], function() {
 
     Route::get('/entity', 'EntityController@getEntities');
     Route::post('/entity', 'EntityController@createEntity');
-    Route::put('/entity', 'EntityController@updateEntity');
-    Route::delete('/entity', 'EntityController@deleteEntity');
+    Route::put('/entity/{id}', 'EntityController@updateEntity');
+    Route::delete('/entity/{id}', 'EntityController@deleteEntity');
 });
 
